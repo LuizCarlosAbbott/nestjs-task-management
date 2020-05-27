@@ -29,11 +29,7 @@ export class TasksService {
     return task;
   }
 
-  deleteTask(id: string): Task | void {
-    let result;
-    this.tasks.forEach((task, index) =>
-      task.id === id ? (result = this.tasks.splice(index, 1)) : '',
-    );
-    return result;
+  deleteTask(id: string): void {
+    this.tasks = this.tasks.filter(task => task.id !== id);
   }
 }
