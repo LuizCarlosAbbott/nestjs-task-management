@@ -28,4 +28,12 @@ export class TasksService {
     this.tasks.push(task);
     return task;
   }
+
+  deleteTask(id: string): Task | void {
+    let result;
+    this.tasks.forEach((task, index) =>
+      task.id === id ? (result = this.tasks.splice(index, 1)) : '',
+    );
+    return result;
+  }
 }
