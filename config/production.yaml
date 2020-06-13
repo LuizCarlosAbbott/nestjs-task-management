@@ -1,2 +1,5 @@
+server:
+  origin: http://bucket.s3-website-us-east-1.amazonaws.com
+
 db:
   syncronize: false
